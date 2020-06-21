@@ -1,9 +1,6 @@
 package pl.sda;
 
-import pl.sda.animal.Cat;
-import pl.sda.animal.Dog;
-import pl.sda.animal.MakesSound;
-import pl.sda.animal.Parrot;
+import pl.sda.animal.*;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -14,16 +11,26 @@ public class Main {
         //polimorfizm
         //kontrakt - przyklad z zycia - powitanie
 
+        // tak nie mozemy zrobic (podobnie jak w klasach abstr)
+        // Flies flies = new Flies();
+
         Scanner scanner = new Scanner(System.in);
-        final MakesSound makesSound;
-        if (scanner.nextLine().equals("kot")) {
-            makesSound = new Cat();
-        } else if (scanner.nextLine().equals("pies")) {
-            makesSound = new Dog();
+        MakesSound makesSound;
+        String choice = scanner.nextLine();
+        if (choice.equals("kot")) {
+            Cat cat = new Cat();
+            System.out.println(cat.makeSound());
+        } else if (choice.equals("pies")) {
+            Dog dog = new Dog();
+            System.out.println(dog.makeSound());
         } else {
-            makesSound = new Parrot();
+            Parrot parrot = new Parrot();
+            System.out.println(parrot.makeSound());
         }
-        System.out.println(makesSound.makeSound());
+
+        Scanner scanner1 = new Scanner(System.in);
+        String name = scanner1.nextLine();
+        //System.out.println(makesSound.makeSound());
 
         //1. Jakby to wygladalo, gdybysmy nie uzyli interfejsu? Czy mielibysmy wiecej kodu?
         //2. Czy interfejsy moga byc podawane w argumentach metod?

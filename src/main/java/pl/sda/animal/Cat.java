@@ -1,6 +1,6 @@
 package pl.sda.animal;
 
-public class Cat implements MakesSound{
+public class Cat {
     public String makeSound() {
         return "miau";
     }

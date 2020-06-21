@@ -1,11 +1,12 @@
 package pl.sda.animal;
 
-public class Parrot implements MakesSound, Flies{
+public class Parrot {
+
     public String makeSound() {
         return "kra kra";
     }
 
     public String fly() {
-        return "fru fru";
+        return null;
     }
 }
