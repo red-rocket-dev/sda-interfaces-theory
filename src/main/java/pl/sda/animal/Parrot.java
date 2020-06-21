@@ -1,6 +1,6 @@
 package pl.sda.animal;
 
-public class Parrot implements MakesSound, Flies {
+public class Parrot implements Bird {
     @Override
     public String makeSound() {
         return "kra kra";

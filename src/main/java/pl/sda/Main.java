@@ -27,6 +27,10 @@ public class Main {
             makesSound = new Parrot();
         }
 
+        Bird bird = new Parrot();
+        MakesSound makesSound1 = new Parrot();
+        Flies flies = new Parrot();
+
         System.out.println(makesSound.makeSound());
 
 
